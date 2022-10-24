@@ -1,0 +1,40 @@
+.sem-container {
+  background-color: #f4f4f4;
+  padding: 1.7em;
+  height: 75px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.sem-label {
+  font-weight: 600;
+}
+
+.sem-label em {
+  /* background-color: #87C387; */
+  margin: 0 25px;
+  /* color:  */
+}
+
+.popup-menu-container {
+  float: right;
+}
+
+.active-status.active {
+  border-radius: 50%;
+  border: 1px solid #6AD96A;
+  background: #7AEC7A;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  float: right;
+}
+
+.active-status.inactive {
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: #949494;
+  float: right;
+}

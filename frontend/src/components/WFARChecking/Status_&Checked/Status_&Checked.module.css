@@ -1,0 +1,20 @@
+.status_CheckContainer{
+    margin-right: 15px;
+}
+.status_CheckContainer h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+.mainContainer{
+    display: flex;
+    margin-right: 20px;
+}
+.dataContainer svg{
+    margin-bottom: -2px;
+    margin-right: 10px;
+}
+.dataContainer h3{
+    font-weight: normal;
+    padding-left: 0;
+    font-size: 14px;
+}

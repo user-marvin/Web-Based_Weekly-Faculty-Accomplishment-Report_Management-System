@@ -1,0 +1,598 @@
+.dashboard-admin {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.dashboard-admin h1,
+.dashboard-admin h2,
+.dashboard-admin h3,
+.dashboard-admin h4,
+.dashboard-admin h5,
+.dashboard-admin p {
+    margin: 0;
+}
+
+.dashboard-admin span {
+    margin-left: 0;
+}
+
+.dashboard-admin .greetings,
+.dashboard-admin .total-submission-container>div,
+.dashboard-admin .wfar-status-container,
+.dashboard-admin .management-container>div,
+.dashboard-admin .manage-pending-accounts {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.dashboard-admin .main-container {
+    display: grid;
+    margin-right: 2px;
+    margin-top: -25px;
+    /* height: 85vh; */
+    height: 90vh;
+    grid-template-columns: 2fr .87fr;
+    grid-template-rows: .66fr .70fr 2.5fr;
+    grid-gap: 1em;
+    grid-template-areas:
+        "header notifications"
+        "total-submission-container management-container"
+        "wfar-status-container management-container";
+}
+
+/* SECTION 1 */
+
+.dashboard-admin .header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-admin .notifications {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+    grid-area: notifications;
+    margin-left: 21px;
+    min-width: max-content;
+}
+
+.dashboard-admin .notification-overlay{
+    position: absolute;
+    width: 380px;
+    height: 450px;
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    top: 15%;
+    right: 15%;
+    z-index: 100;
+    padding: 2% 1% 2% 2%;
+}
+
+.dashboard-admin .notification-overlay .laman{
+    width: 100%;
+    height: 92%;
+    overflow-y: auto;
+    padding-right: 0%;
+}
+
+.dashboard-admin .notification-overlay .label{
+    width: 100%;
+    height: 10%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dashboard-admin .notification-overlay .notification-item{
+    height: 15%;
+    width: 100%;
+    float: left;
+    margin-bottom: 1%;
+}
+
+.dashboard-admin .notification-overlay .notification-item div{
+    height: 100%;
+    width: 88%;
+    float: left;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+.dashboard-admin .notification-overlay .notification-item div .detail{
+    height: 50%;
+    width: 88%;
+    padding-left: 2%;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(86, 83, 83);
+    padding-top: 3%;
+}
+
+.dashboard-admin .notification-overlay .notification-item div .date_time{
+    height: 50%;
+    width: 88%;
+    padding-left: 2%;
+    font-size: 10px;
+    color: rgb(113, 108, 108);
+}
+
+.dashboard-admin .notification-overlay .notification-item img{
+    float: left;
+    margin-top: 2%;
+    height: 70%;
+    width: 12%;
+    border-radius: 50%;
+}
+
+.dashboard-admin .notification-container {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    background: #BE5A40;
+}
+
+.dashboard-admin .notification-container img {
+    margin: auto;
+    margin-top: 8.5px;
+    display: block;
+    width: 60%;
+    height: 60%;
+    cursor: pointer;
+}
+
+.dashboard-admin .greetings {
+    margin-left: 20px;
+    padding: 8px 30px;
+    /* vertical-align: middle; */
+    /* display: flex;
+    align-items: center; */
+    /* height: 62%; */
+}
+
+.dashboard-admin .greetings h3,
+.dashboard-admin .greetings p {
+    margin: 3px;
+    font-weight: 600;
+}
+
+.dashboard-admin .greetings p {
+    font-size: 12px;
+    color: #9C9C9C;
+}
+
+/* SECTION 2 */
+
+.dashboard-admin .total-submission-container {
+    display: grid;
+    grid-area: total-submission-container;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.dashboard-admin .total-submission-container>div,
+.dashboard-admin .management-container>div:nth-child(-n+3) {
+    padding: 20px;
+}
+
+.dashboard-admin .per-role-submission {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+
+.dashboard-admin .info .phrase {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.dashboard-admin .graph-container {
+    height: 85px;
+    width: 85px;
+    place-items: center;
+}
+
+.dashboard-admin .circular-progress {
+    position: relative;
+    height: 100%;
+    width: same-as-height;
+    background-color: #F1BFB2;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.dashboard-admin .circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 78%;
+    width: 78%;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.dashboard-admin .value-container {
+    position: relative;
+    color: #BE5A40;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* .graph {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.percent {
+    position: relative;
+    width: 100%;
+}
+
+.percent svg {
+    position: relative;
+    width: 100%;
+}
+
+.percent svg circle {
+    fill: none;
+    stroke-width: 8;
+    stroke: #BE5A40;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    stroke-linecap: round;
+}
+
+.percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #F1BFB2;
+}
+
+.percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(400 - (400 * 50) / 100);
+    stroke: #BE5A40;
+}
+
+.percent .number {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #BE5A40;
+}
+
+.percent .number p {
+    font-weight: 700;
+    font-size: 14px;
+} */
+
+.dashboard-admin .total-submission-container h5 {
+    color: #cccccc;
+    font-size: 13px;
+}
+
+.dashboard-admin .total-submission-status {
+    margin-top: 10px;
+}
+
+.dashboard-admin .total-submitted {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.dashboard-admin .total-employees {
+    /* kapag hindi ginawang span, tanggalin sa pag comment */
+    /* padding-bottom: 4px;
+    align-self: flex-end; */
+    font-size: 14px;
+    font-weight: 700;
+    color: #939393;
+}
+
+/* SECTION 3 */
+
+.dashboard-admin .wfar-status-container {
+    padding: 20px;
+    grid-area: wfar-status-container;
+}
+
+.dashboard-admin .wfar-status-container h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dashboard-admin .wfar-status-container p {
+    font-size: 12px;
+    color: #A6A6A6;
+    border-left: #D9D9D9 solid 2px;
+    padding-left: 5px;
+}
+
+
+/* START OF KOPYA */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dashboard-admin .status-graph>div {
+    padding-top: 50px;
+}
+
+.dashboard-admin .donut-chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    border-radius: 100%
+}
+
+.dashboard-admin p.center {
+    background: #ffffff;
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    line-height: 35px;
+    padding: 15% 0 0;
+}
+
+
+.dashboard-admin .portion-block {
+    border-radius: 50%;
+    clip: rect(0px, 200px, 200px, 100px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.dashboard-admin .circle {
+    border-radius: 50%;
+    clip: rect(0px, 100px, 200px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+
+
+
+.dashboard-admin #part1 .circle {
+    background-color: #BA6124;
+    animation: first 1s 1 forwards;
+}
+
+
+.dashboard-admin #part2 .circle {
+    background-color: #DE752D;
+    animation: second 1s 1 forwards 1s;
+}
+
+.dashboard-admin #part3 .circle {
+    background-color: #F09971;
+    animation: third 0.5s 1 forwards 2s;
+}
+:root {
+    --first-port-degree: 100deg;
+    --second-port-degree: 150deg;
+    --third-port-degree: 111deg;
+}
+
+/* Animation */
+@keyframes first {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(var(--first-port-degree));
+    }
+}
+
+@keyframes second {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(var(--second-port-degree));
+    }
+}
+
+@keyframes third {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(var(--third-port-degree));
+    }
+}
+
+/* END OF KOPYA */
+
+.dashboard-admin .status-graph-container {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+}
+
+.dashboard-admin .status-graph-container>div {
+    height: 100%;
+    width: 35%;
+}
+
+.dashboard-admin .status-graph-container .status-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: solid; */
+    padding-left: 5%;
+}
+
+.dashboard-admin .status-container .per-status-container {
+    padding: 15px;
+    display: flex;
+}
+
+.dashboard-admin .status-container .per-status-container p {
+    padding: 0;
+    border: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.dashboard-admin .status-container .per-status-container .square {
+    border-radius: 0;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border: solid 0.5px;
+}
+
+.dashboard-admin .text-link {
+    color: inherit;
+}
+
+.dashboard-admin .no_pending_dashboard{
+    display: inline;
+    margin-left: 40px;
+    font-size: 1.5em;
+}
+
+.dashboard-admin .status-container .per-status-container:nth-child(1) .square {
+    background-color: #BA6124;
+}
+
+.dashboard-admin .status-container .per-status-container:nth-child(2) .square {
+    background-color: #DE752D;
+}
+
+.dashboard-admin .status-container .per-status-container:nth-child(3) .square {
+    background-color: #F09971;
+}
+
+/* SECTION 4 */
+
+.dashboard-admin .management-container {
+    grid-area: management-container;
+    display: grid;
+    grid-template-rows: 2fr 2fr 2fr 1fr;
+    grid-gap: 1em;
+    margin-left: 21px;
+}
+
+.dashboard-admin .management-container h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dashboard-admin .users {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.dashboard-admin .users>div {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+
+.dashboard-admin .users .user-container:nth-child(2) {
+    position: relative;
+    left: -14px;
+}
+
+.dashboard-admin .users .user-container:nth-child(3) {
+    position: relative;
+    left: -28px;
+}
+
+.dashboard-admin .users .user-container:nth-child(4) {
+    position: relative;
+    left: -42px;
+}
+
+.dashboard-admin .users .user-container:nth-child(5) {
+    position: relative;
+    left: -54px;
+}
+
+.dashboard-admin .users .user-container:nth-child(6) {
+    position: relative;
+    left: -66px;
+}
+
+.dashboard-admin .users .user-container p{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.dashboard-admin .users .user-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* object-fit: cover; */
+}
+
+.dashboard-admin .users .more-users-container {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    left: -42px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+}
+
+.dashboard-admin .manage-pending-accounts {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    font-weight: 600;
+}
+
+.dashboard-admin .manage-pending-accounts h3 {
+    font-weight: 600;
+}
+
+.dashboard-admin .pending-accounts-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 15px;
+    background: #F8E3D5;
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+}
+
+.dashboard-admin .footer {
+    grid-area: footer;
+}

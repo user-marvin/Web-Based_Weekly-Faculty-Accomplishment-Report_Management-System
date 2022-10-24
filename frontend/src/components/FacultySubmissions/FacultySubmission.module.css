@@ -1,0 +1,16 @@
+.viewOptionsContainer {
+    margin: 8px 0;
+    float: right;
+    display: flex;
+    width: fit-content;
+}
+
+.viewOptionsContainer .active {
+
+}
+
+.mainContainer small{
+    /* font-weight: 600; */
+    /* font-size: 12px; */
+    /* text-transform: uppercase; */
+}

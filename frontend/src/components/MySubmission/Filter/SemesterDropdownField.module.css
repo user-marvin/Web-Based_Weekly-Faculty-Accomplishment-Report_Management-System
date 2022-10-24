@@ -1,0 +1,11 @@
+.filter-component {
+    display: flex;
+    align-items: center;
+}
+
+.filter-component label {
+    font-weight: 700;
+    font-size: 1em;
+    margin-top: 7px;
+    margin-right: 10px;
+}

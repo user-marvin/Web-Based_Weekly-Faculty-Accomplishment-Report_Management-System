@@ -1,0 +1,140 @@
+.table {
+    display: block;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* margin: 0 5px; */
+    margin-left: 5px;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #EAEBED !important;
+}
+
+.table::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+.table::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 5px;
+}
+
+.table td,
+.table tr,
+.table th {
+    background-color: #FFFFFF !important;
+    padding: 0px 40px !important;
+    height: 60px;
+    border: 1px solid #EAEBED !important;
+    text-align: center;
+}
+
+.table tr:nth-child(1) th .weekLabel {
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0px 0 8px 0;
+    color: #666B73;
+}
+
+.weekTextContainer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 8px 0px 3px 0;
+    color: #666B73;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 10px;
+    width: fit-content;
+    height: 20px;
+    padding: 2px 10px;
+}
+
+.weekLabel {
+    width: 150px;
+    /* background-color: #0F8B57; */
+}
+
+.presentWeek {
+    color: #FFFFFF;
+    background: #0F8B57;
+}
+
+.table tr th:nth-child(1) {
+    font-size: 14px;
+    border-top-left-radius: 10px;
+}
+
+.facultyLabel {
+    width: 150px;
+    color: #666B73;
+}
+
+.table tr td:nth-child(1) {
+    border-left: none;
+    text-align: left;
+}
+
+.table tr th:nth-child(1) svg:hover {
+    cursor: pointer;
+}
+
+.table tr th:nth-child(1) svg {
+    margin-left: 10px;
+}
+
+.table tr th:nth-child(1) svg:hover {
+    cursor: pointer;
+}
+
+.table tr th {
+    border-top: none;
+    border-left: none;
+}
+
+.table strong {
+    font-weight: 600;
+}
+
+.table td:first-child {
+    cursor: pointer;
+}
+
+.noSubmission {
+    font-weight: 600;
+    color: #EC5151;
+}
+
+.forChecking {
+    font-weight: 600;
+    color: #777777;
+}
+
+.table td:hover {
+    background: #f4f4f4 !important;
+    transition: .15s linear;
+}
+
+.withRevisions {
+    font-weight: 600;
+    color: #DC831B;
+}
+
+.sortAscSvg {
+    transform: rotate(0deg);
+}
+
+.sortDescSvg {
+    transform: rotate(180deg);
+}
+
+/* fixed */
+.table .fixed {
+    background-color: #fafafa !important;
+    position: sticky;
+    left: 0;
+    z-index: 5;
+}

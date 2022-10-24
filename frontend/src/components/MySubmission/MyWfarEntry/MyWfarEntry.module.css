@@ -1,0 +1,92 @@
+.entryCard {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin: 12px 25px;
+    padding: 15px 30px;
+    color: #323232;
+    display: flex;
+    align-items: center;
+}
+.entryNoLabel {
+    font-weight: 600;
+    font-size: 15px;
+    width: 15%;
+    /* padding:  */
+}
+
+.entryDetails {
+    display: flex;
+    width: 85%;
+}
+
+.entryDetails span {
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+    color: #777777;
+    padding: 0 10px;
+}
+
+.entryDetails .entryDate {
+    width: 150px;
+    text-align: left !important;
+    font-weight: 600;
+}
+
+.entryDetails .entryDate {
+    width: 150px;
+    text-align: left !important;
+    font-weight: 600;
+}
+
+.entryDetails .entryCourse {
+    font-weight: 500;
+    margin-right: 5px;
+    width: 80px;
+    text-align: left;
+}
+
+.entryDetails .entrySubject {
+    margin-left: 5px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.entryMoreOptions {
+    width: 15%;
+    position: relative;
+}
+
+.entryMoreOptions svg{
+    float: right;
+    cursor: pointer;
+}
+/* 
+.pop-Up {
+    position: absolute;
+    right: 25px;
+    bottom: -40px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 0.75em;
+    display: none;
+}
+
+.pop-up ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pop-up ul li {
+    padding: 5px 25px 6px 6px;
+    cursor: pointer;
+}
+
+.pop-up ul li:hover {
+    background: #F1F1F1;
+    border-radius: 5px;
+} */

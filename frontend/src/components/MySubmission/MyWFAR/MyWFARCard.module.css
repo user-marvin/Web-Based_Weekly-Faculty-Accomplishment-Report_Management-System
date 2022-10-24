@@ -1,0 +1,101 @@
+.card {
+    background: #F8F8FA;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin: 15px 0;
+    width: 100%;
+    transition: .12s linear;
+}
+
+
+.card:hover {
+    background: #E5E5E5;
+    transition: .12s linear;
+}
+
+.wfarContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.entriesContainer {
+    width: 100%;
+    display: none;
+}
+
+.openClose {
+    padding: 15px;
+}
+
+.openClose svg {
+    cursor: pointer;
+}
+
+.entriesContainer.close {
+    display: none;
+}
+
+.entriesContainer.open {
+    display: block;
+}
+
+.wfarContainer > div:nth-child(1) {
+    width: 20%;
+    border-right: 1px solid #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding-right: 5%;
+}
+
+.wfarContainer > div:nth-child(2) {
+    width: 30%;
+    padding: 0px 5%;
+}
+
+.wfarContainer > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    width: 50%;
+    padding: 0px 2%;
+}
+
+.wfarContainer .weekContainer {
+    width: fit-content;
+}
+.wfarContainer .weekContainer .weekLabel {
+    font-weight: 700;
+    font-size: 1em;
+    padding: 5px 7.5px;
+    color: #BE5A40;
+    text-align: center;
+}
+
+.wfarContainer .weekContainer .weekDate {
+    font-weight: 500;
+    font-size: .875em;
+    padding: 5px 7.5px 5px 7.5px;
+    color: #777;
+    text-align: center;
+}
+
+.wfarContainer .entryLabelContainer {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.wfarContainer .entryLabelContainer .entryNo {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.buttonStatusContainer {
+    margin-right: 15px;
+    align-items: center;
+}
+

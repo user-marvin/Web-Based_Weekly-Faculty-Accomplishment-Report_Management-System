@@ -1,0 +1,167 @@
+
+.header-container{
+    width: 100%;
+}
+.body-container{
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px rgba(233, 216, 206, 0.7);
+}
+.dp-container{
+    display: flex;
+    height: 170px;
+    background: linear-gradient(#BB7360 65%, transparent 35%);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    /* border: 1px solid black; */
+}
+
+.image-container {
+    width: 20%;
+}
+
+.name-container {
+    width: 80%;
+    margin-top: 78px;
+}
+
+.name-container h3,
+p {
+    margin: 0;
+}
+
+.name-container p {
+    color: #BAB7B7;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.name-container h3 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.image-bg-container{
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    float: right;
+    margin: 17px 20px 0 0;
+}
+.image-bg-container img {
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+}
+@media (min-width: 641px) and (max-width: 1007px){
+    .image-bg-container{
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+    }
+    .image-bg-container img{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media (min-width: 1008px) and (max-width: 2000px){
+    .image-bg-container{
+        width: 150px;
+        height: 150px;
+    }
+    .image-bg-container img{
+        width: 130px;
+        height: 130px;
+    }
+}
+.edit-buttons-container{
+    margin-left: 30px;
+    padding-top: 30px;
+    width: 18%;
+}
+.edit-buttons-container button{
+    margin-top: 20px;
+    position: relative;
+    right: 0;
+}
+.button-field{
+    display: flex;
+    margin-right: 0px;
+    margin-left: auto;
+    width: fit-content;
+} 
+.details-container{
+    display: flex;
+}
+.user-details-container{
+    width: 82%;
+}
+.user-details-container h3{
+    margin-left: 60px;
+}
+.scrollable-area{
+    overflow-y: scroll;
+    margin: 10px 5px 20px 10px;
+    height: 320px;
+}
+.scrollable-area::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    /* border: 1px solid black; */
+  }
+  .scrollable-area::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 5px;
+  }
+.user-info-container{
+    margin-top: 20px;
+    display: flex;
+}
+.details-placeholder{
+    margin-left: 20px;
+}
+.details-placeholder p{
+    margin: 0;
+    font-size: 16px;
+}
+.details-placeholder:nth-child(1){
+   width: 18%;
+   margin-left: 100px;
+}
+.details-placeholder:nth-child(1) p{
+   font-weight: 600;
+}
+.info-text{
+    color: #888888;
+}
+.modal-desc-text{
+    margin: 0 0 10px 0;
+}
+.modal-header-text{
+    margin: 5px 0 5px 0;
+}
+.input-field-scrollable{
+    overflow-y: scroll;
+    padding: 10px;
+    max-height: 350px;
+}
+.input-field-scrollable::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    /* border: 1px solid black; */
+}
+.input-field-scrollable::-webkit-scrollbar-thumb {
+background: #c4c4c4;
+border-radius: 5px;
+}
+#UploadSignature{
+    color: #888888;
+    cursor: pointer !important;
+}
+#UploadSignature:hover{
+    color: rgb(235, 193, 137);
+}
